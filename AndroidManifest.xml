@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.dirtrom.updater"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="17" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+  	<uses-permission android:name="android.permission.INTERNET" />
+  	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+  	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.dirtrom.updater.MainActivity" android:theme="@android:style/Theme.Holo.Dialog" 
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+		<activity 
+            android:name="com.dirtrom.updater.ParsingXML" android:theme="@android:style/Theme.Holo.Dialog" />    
+        <activity
+            android:name=".SettingsActivity" 
+            android:theme="@android:style/Theme.Holo.Dialog" />
+       <receiver android:name=".WidgetActivity" android:label="DIRT Updater">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+            
+            <meta-data android:name="android.appwidget.provider" android:resource="@xml/widget_info" />
+        </receiver>
+        <receiver android:name=".autostart">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <service android:enabled="true" android:name=".ManifestService" />
+        <action android:name="android.net.conn.CONNECTIVITY_CHANGE" />
+    </application>
+
+</manifest>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" >
+  
+   <PreferenceCategory android:title="Update Intervals">
+       <CheckBoxPreference
+            android:key="pref_key_update_interval_1_day"
+            android:summary="Set update interval to 1 day"
+            android:title="1 Day"
+            android:defaultValue="false"/>
+       <CheckBoxPreference
+            android:key="pref_key_update_interval_2_day"
+            android:summary="Set update interval to 2 days"
+            android:title="2 Days"
+            android:defaultValue="false"/>
+       <CheckBoxPreference
+            android:key="pref_key_update_interval_3_day"
+            android:summary="Set update interval to 3 days"
+            android:title="3 Days"
+            android:defaultValue="false"/>
+       <CheckBoxPreference
+            android:key="pref_key_update_interval_5_day"
+            android:summary="Set update interval to 5 days"
+            android:title="5 Days"
+            android:defaultValue="false"/>
+       <CheckBoxPreference
+            android:key="pref_key_update_interval_7_day"
+            android:summary="Set update interval to 7 days"
+            android:title="7 Days"
+            android:defaultValue="true"/>
+    </PreferenceCategory>
+ 
+  
+</PreferenceScreen>

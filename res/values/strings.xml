@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">DIRT Updater</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="CheckServer">Check Server Version</string>
+    <string name="updating">Updating Information, Please wait...</string>
+    <string name="dev">Device:</string>
+    <string name="devBuildNumber">Device Vers:</string>
+    <string name="serverVers">Server Vers:</string>
+    <string name="dataChecker">Last Server Check:</string>
+    <string name="desc">Background Image</string>
+
+</resources>
