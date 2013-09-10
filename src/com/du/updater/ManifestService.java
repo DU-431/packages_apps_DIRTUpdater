@@ -1,4 +1,4 @@
-package com.dirtrom.updater;
+package com.du.updater;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -101,7 +101,7 @@ public class ManifestService extends Service{
 			        		
 			        		try {
 			                    // Create a URL we want to load some xml-data from. 
-			                    URL url = new URL("http://dirtrom.com/private/dirtversions.xml");
+			                    URL url = new URL("http://dirtrom.com/private/duversions.xml");
 			
 			                    // Get a SAXParser from the SAXPArserFactory. 
 			                    SAXParserFactory spf = SAXParserFactory.newInstance();
@@ -184,7 +184,7 @@ public class ManifestService extends Service{
 	public String GetBuildNum() {
 		String line = "";
 		try {
-		 Process ifc = Runtime.getRuntime().exec("getprop ro.dirt.buildnum");
+		 Process ifc = Runtime.getRuntime().exec("getprop ro.du.buildnum");
 		 BufferedReader bis = new BufferedReader(new InputStreamReader(ifc.getInputStream()));
 		 line = bis.readLine();
 		 ifc.destroy();

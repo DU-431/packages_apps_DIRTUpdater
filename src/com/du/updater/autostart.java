@@ -1,4 +1,4 @@
-package com.dirtrom.updater;
+package com.du.updater;
 
 import android.content.BroadcastReceiver;
 import android.content.Context;

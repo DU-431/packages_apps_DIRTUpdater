@@ -1,4 +1,4 @@
-package com.dirtrom.updater;
+package com.du.updater;
 
 public class CheckServer {
 

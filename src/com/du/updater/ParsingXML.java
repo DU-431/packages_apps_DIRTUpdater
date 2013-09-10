@@ -1,4 +1,4 @@
-package com.dirtrom.updater;
+package com.du.updater;
 
 import java.net.URL;
 import java.text.SimpleDateFormat;
@@ -48,7 +48,7 @@ public class ParsingXML extends Activity {
 					try {
 		    			Log.v("DIRT", "Connecting to xml file");
 		                // Create a URL we want to load some xml-data from. 
-		                URL url = new URL("http://dirtrom.com/private/dirtversions.xml");
+		                URL url = new URL("http://dirtrom.com/private/duversions.xml");
 
 		                // Get a SAXParser from the SAXPArserFactory. 
 		                SAXParserFactory spf = SAXParserFactory.newInstance();
@@ -90,7 +90,7 @@ public class ParsingXML extends Activity {
 		                Log.v("DIRT", "Message Should Go Away");
 		                finish();
 			        } catch (Exception e) {
-			                Log.e("DIRT", "DIRT Updater", e);
+			                Log.e("DU", "DU Updater", e);
 			                finish();
 			        }
 				}
@@ -98,7 +98,7 @@ public class ParsingXML extends Activity {
 			t.start();
 			
 
-            Log.v("DIRT", "Away with you");
+            Log.v("DU", "Away with you");
 			return "Success";
 			
 		}

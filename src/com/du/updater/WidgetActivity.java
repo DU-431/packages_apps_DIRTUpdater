@@ -1,4 +1,4 @@
-package com.dirtrom.updater;
+package com.du.updater;
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -46,7 +46,7 @@ public class WidgetActivity extends AppWidgetProvider{
     public String GetBuildNum() {
 		String line = "";
 		try {
-		 Process ifc = Runtime.getRuntime().exec("getprop ro.dirt.buildnum");
+		 Process ifc = Runtime.getRuntime().exec("getprop ro.du.buildnum");
 		 BufferedReader bis = new BufferedReader(new InputStreamReader(ifc.getInputStream()));
 		 line = bis.readLine();
 		 ifc.destroy();

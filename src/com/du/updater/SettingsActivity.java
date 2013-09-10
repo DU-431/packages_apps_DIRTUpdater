@@ -1,4 +1,4 @@
-package com.dirtrom.updater;
+package com.du.updater;
 
 import android.content.Context;
 import android.content.Intent;

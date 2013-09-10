@@ -1,4 +1,4 @@
-package com.dirtrom.updater;
+package com.du.updater;
 
 import org.xml.sax.Attributes;
 import org.xml.sax.SAXException;
@@ -58,7 +58,7 @@ public class Handlers extends DefaultHandler{
         @Override
         public void startElement(String namespaceURI, String localName,
                         String qName, Attributes atts) throws SAXException {
-                if (localName.equals("DIRT")) {
+                if (localName.equals("DU")) {
                         this.in_outertag = true;
                 }else if (localName.equals("Device")) {
                 		
@@ -81,7 +81,7 @@ public class Handlers extends DefaultHandler{
         @Override
         public void endElement(String namespaceURI, String localName, String qName)
                         throws SAXException {
-                if (localName.equals("DIRT")) {
+                if (localName.equals("DU")) {
                         this.in_outertag = false;
                 }else if (localName.equals("Device")) {
                         this.in_device = false;

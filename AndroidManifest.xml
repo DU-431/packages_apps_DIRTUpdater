@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.dirtrom.updater"
+    package="com.du.updater"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -19,7 +19,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="com.dirtrom.updater.MainActivity" android:theme="@android:style/Theme.Holo.Dialog" 
+            android:name="com.du.updater.MainActivity" android:theme="@android:style/Theme.Holo.Dialog" 
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,11 +28,11 @@
             </intent-filter>
         </activity>
 		<activity 
-            android:name="com.dirtrom.updater.ParsingXML" android:theme="@android:style/Theme.Holo.Dialog" />    
+            android:name="com.du.updater.ParsingXML" android:theme="@android:style/Theme.Holo.Dialog" />    
         <activity
             android:name=".SettingsActivity" 
             android:theme="@android:style/Theme.Holo.Dialog" />
-       <receiver android:name=".WidgetActivity" android:label="DIRT Updater">
+       <receiver android:name=".WidgetActivity" android:label="DU Updater">
             <intent-filter>
                 <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
             </intent-filter>

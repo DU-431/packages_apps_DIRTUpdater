@@ -1,4 +1,4 @@
-package com.dirtrom.updater;
+package com.du.updater;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedReader;
@@ -42,8 +42,8 @@ public class MainActivity extends Activity {
 	private String model;
 	private TextView DeviceId, DeviceVers, CurrVers, DateCheck;
 	private Button btnCheck;
-	int devVers;
-	int serverVers;
+	int devVers = 0;
+	int serverVers = 0;
     private ProgressDialog mProgressDialog;
     private Intent intent;
     private SharedPreferences settings;
@@ -122,7 +122,7 @@ public class MainActivity extends Activity {
 		for (NetworkInfo adapter : activeNet)
 		{
 			if (adapter.isConnected()){
-				Log.v("DIRT", "Device is online, getting info");
+				Log.v("DU", "Device is online, getting info");
 				online = true;
 				break;
 			}
@@ -161,7 +161,7 @@ public class MainActivity extends Activity {
 		        case DialogInterface.BUTTON_POSITIVE:
 		        	// instantiate it within the onCreate method
 	       			mProgressDialog = new ProgressDialog(MainActivity.this);
-	       			mProgressDialog.setMessage("Downloading Current DIRT ROM");
+	       			mProgressDialog.setMessage("Downloading Current DU ROM");
 	       			mProgressDialog.setIndeterminate(false);
 	       			mProgressDialog.setMax(100);
 	       			mProgressDialog.setProgressStyle(ProgressDialog.STYLE_HORIZONTAL);
@@ -203,7 +203,7 @@ public class MainActivity extends Activity {
 
 	            // download the file
 	            InputStream input = new BufferedInputStream(url.openStream());
-	            OutputStream output = new FileOutputStream(Environment.getExternalStorageDirectory().getPath() + "/Download/DIRTROM_CurrentVersion_" + model + ".zip");
+	            OutputStream output = new FileOutputStream(Environment.getExternalStorageDirectory().getPath() + "/Download/DU_CurrentVersion_" + model + ".zip");
 
 	            byte data[] = new byte[1024];
 	            long total = 0;
@@ -244,7 +244,7 @@ public class MainActivity extends Activity {
 	               public void onClick(DialogInterface dialog, int which) {
 
 		       			try{
-		       				File downloadedFile = new File(Environment.getExternalStorageDirectory().getPath() + "/Download/DIRTROM_CurrentVersion_" + model + ".zip");
+		       				File downloadedFile = new File(Environment.getExternalStorageDirectory().getPath() + "/Download/DU_CurrentVersion_" + model + ".zip");
 		       				Intent i = new Intent();
 		       				i.setAction(android.content.Intent.ACTION_VIEW);
 		       				i.setDataAndType(Uri.fromFile(downloadedFile), "application/zip");
@@ -272,7 +272,7 @@ public class MainActivity extends Activity {
 	public String GetBuildNum() {
 		String line = "";
 		try {
-		 Process ifc = Runtime.getRuntime().exec("getprop ro.dirt.buildnum");
+		 Process ifc = Runtime.getRuntime().exec("getprop ro.du.buildnum");
 		 BufferedReader bis = new BufferedReader(new InputStreamReader(ifc.getInputStream()));
 		 line = bis.readLine();
 		 ifc.destroy();
